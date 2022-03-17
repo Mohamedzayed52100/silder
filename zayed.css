@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.silidercontainer {
+    width: 800px;
+    margin: 10px auto;
+    height: 350px;
+    position: relative;
+}
+
+.silidercontainer img {
+    width: 800px;
+    height: 350px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.silidercontainer img.active {
+    opacity: 1;
+}
+
+.silidercontainer .slidenumber {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.sildercontrol {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sildercontrol span {
+    padding: 5px 10px;
+}
+
+.sildercontrol .prev,
+.next {
+    background-color: #009688;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.sildercontrol .prev.disable,
+.sildercontrol .next.disable {
+    background-color: rgba(0, 150, 136, .3);
+    cursor: no-drop;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    color: #333;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 4px;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+}
+
+ul li.active {
+    background-color: #009688;
+}
